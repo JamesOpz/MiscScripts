@@ -31,12 +31,15 @@ for File in os.listdir(filePath):
         # Needs to run NDPI split tile from the command line on the ndpi file in the folder
             for NDPI_File in os.listdir(newPath):
                 if File.endswith(".ndpi"):
-
+                
+                    # Need to remove witespace from ndpi filename
+                    
                     # Run NDPI split command from the commandline
                     # -m max memory of file
                     # -o is the pixel overlap of the mosaic images
                     absPath = os.path.join(newPath, NDPI_File)
-                    os.system('ndpisplit -m500 '+absPath)
+                    print('ndpisplit -m1000 '+'"'+absPath+'"')
+                    os.system('ndpisplit -m1000 '+'"'+absPath+'"')
 
 
 print(count, " NDPI files processed")
