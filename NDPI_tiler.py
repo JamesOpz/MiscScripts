@@ -38,8 +38,8 @@ for File in os.listdir(filePath):
                     # -m max memory of file
                     # -o is the pixel overlap of the mosaic images
                     absPath = os.path.join(newPath, NDPI_File)
-                    print('ndpisplit -m1000 '+'"'+absPath+'"')
-                    os.system('ndpisplit -m1000 '+'"'+absPath+'"')
+                    print('ndpisplit -m750n -o5  '+'"'+absPath+'"')
+                    os.system('ndpisplit -m750n -o5 '+'"'+absPath+'"')
 
 
 print(count, " NDPI files processed")
